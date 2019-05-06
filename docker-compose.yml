@@ -1,12 +1,12 @@
 version: '3'
 services:
   db:
-    image: mysql:5.7
+    image: postgresql
     environment:
-      MYSQL_USER: root
-      MYSQL_ROOT_PASSWORD: password
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
     volumes:
-      - db_data:/var/lib/mysql/data
+      - db_data:/var/lib/postgresql/data
   web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000"
