@@ -1,9 +1,9 @@
 default: &default
-  adapter: postgresql
+  adapter: mysql2
   encoding: unicode
-  host: db
-  username: root
-  password: password
+  host: <%= ENV["HOST"] >
+  username: <%= ENV["USERNAME"] >
+  password: <%= ENV["PASSWORD"] >
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
