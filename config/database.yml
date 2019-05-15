@@ -1,9 +1,9 @@
 default: &default
-  adapter: postgresql
+  adapter: mysql2
   encoding: unicode
-  host: db
-  username: root
-  password: password
+  host: newcomer-dev.clqp7st46xrd.ap-northeast-1.rds.amazonaws.com
+  username: newcomer
+  password: MWp9krpK4P2QfGW
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
