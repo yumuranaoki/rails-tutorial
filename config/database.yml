@@ -1,9 +1,9 @@
 default: &default
   adapter: mysql2
   encoding: unicode
-  host: newcomer-dev.clqp7st46xrd.ap-northeast-1.rds.amazonaws.com
-  username: newcomer
-  password: MWp9krpK4P2QfGW
+  host: <%= ENV["HOST"] >
+  username: <%= ENV["USERNAME"] >
+  password: <%= ENV["PASSWORD"] >
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
