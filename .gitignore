@@ -27,4 +27,5 @@
 /config/master.key
 /vendor/bundle/
 /config/database.yml
+/config/database.yml
 .env
