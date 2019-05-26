@@ -26,6 +26,4 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /vendor/bundle/
-<<<<<<< HEAD
->>>>>>> origin/chapter-3
 .env
