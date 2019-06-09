@@ -26,3 +26,6 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /vendor/bundle/
+/config/database.yml
+/config/database.yml
+.env
