@@ -1,4 +1,4 @@
-FROM ruby:2.5
+FROM ruby:2.4.4
 RUN apt-get update -qq && apt-get install -y nodejs
 RUN mkdir /myapp
 WORKDIR /myapp
