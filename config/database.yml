@@ -1,21 +1,23 @@
 default: &default
   adapter: mysql2
-  encoding: unicode
-  host: newcomer-dev.clqp7st46xrd.ap-northeast-1.rds.amazonaws.com
-  username: newcomer
-  password: MWp9krpK4P2QfGW
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  encoding: utf8
+  host: localhost
+  username: root
+  password: root
+  pool: 5
 
 development:
   <<: *default
-  database: myapp_development
+  database: rails_tutorial_development 
 
 test:
   <<: *default
-  database: myapp_test
+  database: rails_tutorial_test
 
 production:
   <<: *default
   database: myapp_production
-  username: myapp
+  host: <%= ENV['HOST'] %>
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
