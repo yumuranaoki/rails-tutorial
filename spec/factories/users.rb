@@ -7,6 +7,6 @@ FactoryBot.define do
   factory :singed_user do
     sequence(:name) { |n| "user#{n}" }
     sequence(:email) { |n| "user#{n}@sample.com" }
-    password_digest User.digest('password')
+    password_digest { User.digest('password') }
   end
 end
