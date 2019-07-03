@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   context "Userを作成するとき" do
-    let(:user) { FactoryBot.build(:user, password: 'password', password_confirmation: 'password') }
+    let(:user) { FactoryBot.build(:user) }
 
     it "should be valid" do
       expect(user).to be_valid
